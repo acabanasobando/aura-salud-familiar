@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #8B5CF6;
+  --color-accent-purple: #C084FC;
+  --color-accent-orange: #FB923C;
+  --color-accent-blue: #38BDF8;
+  --color-accent-pink: #F472B6;
+}
+
+@layer base {
+  body {
+    @apply bg-[#F8FAFC] text-slate-900 antialiased transition-colors duration-300;
+  }
+}
+
+/* Dark Mode Styles */
+.dark body {
+  @apply bg-black text-white;
+}
+
+.dark .highlight-card {
+  @apply bg-zinc-900/50 border-zinc-800 shadow-none backdrop-blur-md;
+}
+
+.dark .highlight-card:hover {
+  @apply border-white/20 bg-zinc-900/80 shadow-2xl shadow-white/5;
+}
+
+.dark .aura-gradient {
+  background: radial-gradient(circle at 50% 0%, #111 0%, #000 70%);
+  opacity: 1;
+}
+
+.dark .ios-blur {
+  @apply bg-black/80 border-zinc-900;
+}
+
+.dark header, .dark nav {
+  @apply bg-black/90 border-zinc-900;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4 {
+  @apply text-white;
+}
+
+.dark p, .dark .text-slate-500, .dark .text-slate-400 {
+  @apply text-zinc-400;
+}
+
+.dark input, .dark select, .dark textarea {
+  @apply bg-zinc-900 border-zinc-800 text-white placeholder:text-zinc-600 focus:border-white/50;
+}
+
+.dark .bg-white, .dark .bg-[#F1F5F9], .dark .bg-[#F8FAFC] {
+  @apply bg-black;
+}
+
+.dark .border-slate-100, .dark .border-slate-50, .dark .border-slate-200 {
+  @apply border-zinc-900;
+}
+
+.dark .bg-slate-50, .dark .bg-slate-100, .dark .bg-slate-200, .dark .bg-slate-800, .dark .bg-slate-900 {
+  @apply bg-zinc-900/50;
+}
+
+.dark .text-slate-800, .dark .text-slate-900, .dark .text-slate-700, .dark .text-slate-600 {
+  @apply text-white;
+}
+
+.dark .text-slate-500, .dark .text-slate-400 {
+  @apply text-zinc-500;
+}
+
+.dark .border-slate-100, .dark .border-slate-200, .dark .border-slate-300, .dark .border-slate-800 {
+  @apply border-zinc-800/50;
+}
+
+.dark .shadow-xl, .dark .shadow-2xl {
+  @apply shadow-none;
+}
+
+/* Page Specific Borders */
+.dark .page-border-dashboard { @apply border-primary; }
+.dark .page-border-profiles, .dark .page-border-add-family { @apply border-accent-blue; }
+.dark .page-border-vaccination, .dark .page-border-register-vaccine { @apply border-emerald-500; }
+.dark .page-border-consultations, .dark .page-border-register-consultation { @apply border-rose-500; }
+.dark .page-border-studies, .dark .page-border-upload-study { @apply border-accent-orange; }
+.dark .page-border-reports { @apply border-indigo-500; }
+.dark .page-border-add-medical-entity, .dark .page-border-medical-directory { @apply border-zinc-500; }
+.dark .page-border-login { @apply border-zinc-800; }
+
+.dark .bg-primary/10 {
+  @apply bg-primary/30;
+}
+
+.dark .bg-primary/5 {
+  @apply bg-primary/20;
+}
+
+.highlight-card {
+  @apply bg-white border-2 border-slate-100 shadow-xl shadow-slate-200/50 rounded-[2.5rem] overflow-hidden transition-all duration-500;
+}
+
+.highlight-card:hover {
+  @apply border-primary/20 shadow-2xl shadow-primary/10 scale-[1.02];
+}
+
+.aura-gradient {
+  background: linear-gradient(135deg, #DDD6FE 0%, #BAE6FD 50%, #FFEDD5 100%);
+}
+
+.section-border {
+  @apply border-l-4 border-primary pl-4 py-1;
+}
+
+.ios-blur {
+  @apply backdrop-blur-xl bg-white/90 border-b-2 border-slate-100;
+}
+
+.nav-active {
+  @apply text-primary scale-110;
+}
